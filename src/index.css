@@ -1,0 +1,107 @@
+@import 'tailwindcss';
+
+/* ===== Custom Theme ===== */
+@theme {
+  --color-charcoal-50: #f0f4f8;
+  --color-charcoal-100: #d9e2ec;
+  --color-charcoal-200: #bcccdc;
+  --color-charcoal-300: #9fb3c8;
+  --color-charcoal-400: #829ab1;
+  --color-charcoal-500: #627d98;
+  --color-charcoal-600: #486581;
+  --color-charcoal-700: #334e68;
+  --color-charcoal-800: #243b53;
+  --color-charcoal-900: #102a43;
+  --color-charcoal-950: #0a1929;
+
+  --color-cyan-accent: #0df2f2;
+  --color-cyan-glow: #0df2f280;
+  --color-green-accent: #00e676;
+  --color-red-accent: #ff5252;
+}
+
+/* ===== Base Styles ===== */
+@layer base {
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: var(--color-charcoal-950);
+    color: var(--color-charcoal-100);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  #app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* ===== Glassmorphism Utilities ===== */
+@layer components {
+  .glass-card {
+    background: linear-gradient(
+      135deg,
+      rgba(16, 42, 67, 0.7),
+      rgba(10, 25, 41, 0.9)
+    );
+    border: 1px solid rgba(13, 242, 242, 0.1);
+    border-radius: 12px;
+    backdrop-filter: blur(12px);
+  }
+
+  .glass-card-hover {
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .glass-card-hover:hover {
+    border-color: rgba(13, 242, 242, 0.25);
+    box-shadow: 0 0 20px rgba(13, 242, 242, 0.05);
+  }
+
+  .pill-button {
+    padding: 6px 16px;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(13, 242, 242, 0.15);
+    background: transparent;
+    color: var(--color-charcoal-400);
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+
+  .pill-button:hover {
+    border-color: rgba(13, 242, 242, 0.3);
+    color: var(--color-charcoal-200);
+  }
+
+  .pill-button.active {
+    background: rgba(13, 242, 242, 0.15);
+    border-color: var(--color-cyan-accent);
+    color: var(--color-cyan-accent);
+  }
+
+  .text-positive {
+    color: var(--color-green-accent);
+  }
+
+  .text-negative {
+    color: var(--color-red-accent);
+  }
+
+  .trend-up {
+    color: var(--color-green-accent);
+  }
+
+  .trend-down {
+    color: var(--color-red-accent);
+  }
+}
