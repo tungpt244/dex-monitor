@@ -37,8 +37,10 @@ git add -A
 ### 4. Commit với Conventional Commits format
 
 ```bash
-git commit -m "<type>(<scope>): <description>"
+git commit -m "🤖 <type>(<scope>): <description>"
 ```
+
+> **Luôn thêm prefix `🤖`** vào đầu commit message để phân biệt commit từ Agent với commit của người dùng.
 
 **Commit types:**
 
@@ -54,9 +56,10 @@ git commit -m "<type>(<scope>): <description>"
 | `perf`     | Cải thiện performance                     |
 
 **Quy tắc viết commit message:**
+- **Luôn bắt đầu bằng `🤖`** (bắt buộc).
 - `<scope>` là tên module/feature (ví dụ: `auth`, `dashboard`, `api`). Có thể bỏ nếu thay đổi chung.
 - `<description>` viết bằng **tiếng Anh**, lowercase, không dấu chấm cuối, tối đa 72 ký tự.
-- Ví dụ: `feat(auth): add login with Google OAuth`
+- Ví dụ: `🤖 feat(auth): add login with Google OAuth`
 
 ### 5. Push lên remote
 
