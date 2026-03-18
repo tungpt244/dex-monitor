@@ -1,0 +1,14 @@
+{
+  "workflow": {
+    "preference": "Fast-Track",
+    "research": "minimal",
+    "require_approval": true
+  },
+  "integrations": {
+    "telegram": true
+  },
+  "tech_stack": {
+    "frontend": "Vue 3",
+    "styling": "index.css"
+  }
+}
